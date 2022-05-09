@@ -101,7 +101,30 @@ section#main {
   }
 }
 
-@mixin geometricLight($color, $blur, $width, $height, $opacity: 0.6) {
+section#about {
+  margin: 150px auto 0;
+  text-align: center;
+
+  h2 {
+    font-weight: 500;
+    font-size: 36px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    margin-bottom: 35px;
+  }
+
+  p {
+    margin: 0 auto;
+    width: 700px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+    color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+@mixin geometricLight($color, $blur, $opacity: 0.6) {
   &:after {
     content: '';
     position: absolute;
@@ -111,8 +134,8 @@ section#main {
     opacity: $opacity;
     border-radius: 10000050%;
     filter: blur($blur);
-    width: $width;
-    height: $height;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -143,7 +166,7 @@ section#main {
     position: absolute;
     top: 59px;
     left: 53%;
-    @include geometricLight(#6967E7, 175px, 117px, 111px, 60%);
+    @include geometricLight(#6967E7, 175px, 60%);
     @include geometricAnimation(0ms)
   }
 
@@ -158,8 +181,16 @@ section#main {
     position: absolute;
     top: 768px;
     right: 20px;
-    @include geometricLight(#6967E7, 200px, 340px, 380px, 25%);
+    @include geometricLight(#6967E7, 200px, 25%);
     @include geometricAnimation(1756ms)
+  }
+
+  .cube {
+    position: absolute;
+    top: 1040px;
+    left: 70px;
+    @include geometricLight(#6967E7, 200px,25%);
+    @include geometricAnimation(2750ms)
   }
 }
 
