@@ -1,0 +1,165 @@
+section#main {
+  display: flex;
+  flex-direction: row;
+
+  .left {
+    width: 66%;
+    background: #14132B;
+    border: 2px solid #1F1E34;
+    border-radius: 0 0 150px 0;
+    margin-right: 125px;
+    margin-bottom: 130px;
+    padding: 60px 140px 90px calc(max(75px, calc(100vw - 1213px) / 2));;
+
+    header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 200px;
+
+      img.logo {
+        width: 60px;
+      }
+
+      h3.app-name {
+        font-weight: 600;
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        font-size: 24px;
+        letter-spacing: 0.01em;
+        margin-left: 20px;
+      }
+    }
+
+    span.advantages {
+      font-weight: 600;
+      font-size: 24px;
+      letter-spacing: 0.01em;
+      color: #9674F5;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 72px;
+      letter-spacing: 0.01em;
+      color: #FFFFFF;
+      margin-top: 10px;
+    }
+
+    p.description {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 35px;
+      letter-spacing: 0.01em;
+      color: rgba(255, 255, 255, 0.8);
+      width: 580px;
+    }
+
+    button.download {
+      display: flex;
+      flex-direction: row;
+      padding: 15px 30px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      color: white;
+      background: #9674F5;
+      box-shadow: 0 3px 24px rgba(150, 116, 245, 0.25), inset -2px 3px 10px rgba(255, 255, 255, 0.15), inset 2px -3px 7px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 300ms ease, box-shadow 300ms ease;
+
+      &:hover {
+        background: #7f57f0;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 rgba(150, 116, 245, 0.0), inset -2px 3px 10px rgba(255, 255, 255, 0.15), inset 2px -3px 7px rgba(0, 0, 0, 0.2);
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .right {
+    width: 33%;
+    margin-right: calc(max(75px, calc(100vw - 1213px) / 2));
+    //margin-right: calc(max(8vw, 75px));;
+
+    img {
+      margin-top: 130px;
+      width: 100%;
+    }
+  }
+}
+
+@mixin geometricLight($color, $blur, $width, $height, $opacity: 0.6) {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: $color;
+    opacity: $opacity;
+    border-radius: 10000050%;
+    filter: blur($blur);
+    width: $width;
+    height: $height;
+  }
+}
+
+@mixin geometricAnimation($delay) {
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(30px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  animation: float 8s ease-in-out infinite;
+  animation-delay: $delay;
+}
+
+.geometric {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100000;
+
+  .rock {
+    position: absolute;
+    top: 59px;
+    left: 53%;
+    @include geometricLight(#6967E7, 175px, 117px, 111px, 60%);
+    @include geometricAnimation(0ms)
+  }
+
+  .torus {
+    position: absolute;
+    top: 180px;
+    left: -90px;
+    @include geometricAnimation(5200ms)
+  }
+
+  .torus-half {
+    position: absolute;
+    top: 768px;
+    right: 20px;
+    @include geometricLight(#6967E7, 200px, 340px, 380px, 25%);
+    @include geometricAnimation(1756ms)
+  }
+}
+

@@ -16,26 +16,63 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/styles.scss">
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+<section id="main">
+  <div class="left">
+    <header>
+      <img src="img/Logo.png" alt="Logo" class="logo">
+      <h3 class="app-name">Phototime</h3>
+    </header>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <span class="advantages">OFFLINE. SUITABLE. POWERFUL</span>
+    <h1>The Most Convenient<br>Golden Hour Calculator</h1>
+    <p class="description">
+      Phototime calculates the time of the golden and blue hours, and also shows the weather anywhere
+      in the world. A trusted assistant for any photographer!
+    </p>
+
+    <button class="download">
+      <img src="img/playstore.svg" alt="google play icon" class="google-play-icon">
+      Download
+    </button>
+  </div>
+  <div class="right">
+    <img src="img/preview/main.png" alt="Preview" >
+  </div>
+</section>
+
+<div class="geometric">
+  <div class="rock"><img src="img/geometric/Rock.png" alt=""></div>
+  <div class="torus"><img src="img/geometric/Torus.png" alt=""></div>
+  <div class="torus-half"><img src="img/geometric/Torus-half.png" alt=""></div>
+</div>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>

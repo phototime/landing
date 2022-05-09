@@ -15,6 +15,18 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  background: #0C0B20;
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
 }
 
 /*
