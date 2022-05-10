@@ -4,6 +4,11 @@ h2 {
   letter-spacing: 0.01em;
   color: #FFFFFF;
   margin-bottom: 35px;
+  padding: 0 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+  }
 }
 
 section#main {
@@ -17,7 +22,19 @@ section#main {
     border-radius: 0 0 150px 0;
     margin-right: 125px;
     margin-bottom: 130px;
-    padding: 60px 140px 90px calc(max(75px, calc(100vw - 1213px) / 2));;
+    padding: 60px 140px 90px calc(max(75px, calc(100vw - 1213px) / 2));
+
+    @media screen and (max-width: 1350px) {
+      width: 100%;
+      border-radius: 0;
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
 
     header {
       display: flex;
@@ -44,15 +61,23 @@ section#main {
       font-size: 24px;
       letter-spacing: 0.01em;
       color: #9674F5;
+
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
     }
 
     h1 {
       font-weight: 600;
       font-size: 48px;
-      line-height: 72px;
+      line-height: 150%;
       letter-spacing: 0.01em;
       color: #FFFFFF;
       margin-top: 10px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 36px;
+      }
     }
 
     p.description {
@@ -62,7 +87,7 @@ section#main {
       line-height: 35px;
       letter-spacing: 0.01em;
       color: rgba(255, 255, 255, 0.8);
-      width: 580px;
+      width: calc(min(580px, 90vw));
     }
 
     button.download {
@@ -95,16 +120,21 @@ section#main {
         margin-right: 15px;
       }
     }
+
+
   }
 
   .right {
     width: 33%;
     margin-right: calc(max(75px, calc(100vw - 1213px) / 2));
-    //margin-right: calc(max(8vw, 75px));;
 
     img {
       margin-top: 130px;
       width: 100%;
+    }
+
+    @media screen and (max-width: 1350px) {
+      display: none;
     }
   }
 }
@@ -113,9 +143,18 @@ section#about {
   margin: 150px auto 0;
   text-align: center;
 
+  @media screen and (max-width: 1336px) {
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
+
   p {
     margin: 0 auto;
-    width: 700px;
+    padding: 0 20px;
+    width: calc(min(700px, 90vw));
     font-weight: 400;
     font-size: 20px;
     line-height: 36px;
@@ -128,10 +167,22 @@ section#features {
   margin: 250px auto 0;
   text-align: center;
 
+  @media screen and (max-width: 1336px) {
+    margin-top: 200px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 120px;
+  }
+
   .features-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
 
     .feature {
       display: flex;
@@ -139,6 +190,12 @@ section#features {
       align-items: center;
       flex-direction: column;
       margin: 15px 100px 0;
+
+      @media screen and (max-width: 768px) {
+        &#forecast {
+          margin-bottom: 50px;
+        }
+      }
 
       img.icon {
         width: 200px;
@@ -172,19 +229,35 @@ section#screenshots {
   flex-direction: column;
   align-items: center;
 
+  @media screen and (max-width: 1336px) {
+    margin-top: 200px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 120px;
+  }
+
   h2 {
     margin-bottom: 65px;
   }
 
-  .row {
+  .grid {
     width: calc(min(90vw, 1200px));
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 80px;
+    grid-row-gap: 50px;
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     img {
-      width: calc(33% - 80px);
-      margin: 0 40px;
+      width: 100%;
     }
   }
 }
@@ -198,12 +271,32 @@ section#contact {
   border: 0.5px solid rgba(255, 255, 255, 0.25);
   margin: 50px auto 0;
 
+  @media screen and (max-width: 1350px) {
+    padding: 40px 60px;
+    border-radius: 25px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
   h3 {
     font-weight: 500;
     font-size: 28px;
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 1350px) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
   }
 
   .input-container {
@@ -223,6 +316,11 @@ section#contact {
       &::placeholder {
         color: rgba(255, 255, 255, 0.4);
       }
+
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+        padding: 12px 24px;
+      }
     }
 
     button {
@@ -237,7 +335,7 @@ section#contact {
       top: 10px;
       right: 10px;
       transition: background-color 300ms ease, transform 300ms ease;
-      box-shadow: 0px 2px 8px rgba(92, 39, 232, 0.3);
+      box-shadow: 0 2px 8px rgba(92, 39, 232, 0.3);
 
       &:hover {
         background-color: #9d7fec;
@@ -246,6 +344,39 @@ section#contact {
       &:active {
         transform: scale(0.98);
       }
+
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+        padding: 6px 30px;
+        border-radius: 10px;
+        top: 6px;
+        right: 6px;
+      }
+    }
+  }
+}
+
+section#author {
+  margin-top: 170px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 1240px) {
+    margin-top: 120px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 75px;
+  }
+
+  span {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+
+    .name {
+      color: #BB82F3;
     }
   }
 }
@@ -288,12 +419,26 @@ section#contact {
   overflow: hidden;
   z-index: 100000;
 
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 1350px) {
+    img {
+      transform: scale(0.75);
+    }
+  }
+
   .rock {
     position: absolute;
     top: 59px;
     left: 53%;
     @include geometricLight(#6967E7, 175px, 60%);
-    @include geometricAnimation(0ms)
+    @include geometricAnimation(0ms);
+
+    @media screen and (max-width: 1350px) {
+      left: 75%;
+    }
   }
 
   .torus {
@@ -308,7 +453,12 @@ section#contact {
     top: 768px;
     right: 20px;
     @include geometricLight(#6967E7, 200px, 25%);
-    @include geometricAnimation(1756ms)
+    @include geometricAnimation(1756ms);
+
+    @media screen and (max-width: 1350px) {
+      top: 600px;
+      right: -150px;
+    }
   }
 
   .cube {
@@ -316,7 +466,12 @@ section#contact {
     top: 1040px;
     left: 70px;
     @include geometricLight(#6967E7, 200px, 34%);
-    @include geometricAnimation(2750ms)
+    @include geometricAnimation(2750ms);
+
+    @media screen and (max-width: 1350px) {
+      top: 1130px;
+      left: 10px;
+    }
   }
 
   .torus-2 {
@@ -324,7 +479,12 @@ section#contact {
     top: 1836px;
     right: 100px;
     @include geometricLight(#6967E7, 200px, 34%);
-    @include geometricAnimation(5433ms)
+    @include geometricAnimation(5433ms);
+
+    @media screen and (max-width: 1350px) {
+      top: 1800px;
+      right: -10px;
+    }
   }
 
   .cone {
@@ -332,7 +492,12 @@ section#contact {
     top: 2788px;
     left: -80px;
     @include geometricLight(#A881F1, 200px, 34%);
-    @include geometricAnimation(7031ms)
+    @include geometricAnimation(7031ms);
+
+    @media screen and (max-width: 1350px) {
+      top: 2788px;
+      left: -130px;
+    }
   }
 
   .dome {
@@ -340,15 +505,23 @@ section#contact {
     top: 3780px;
     right: 60px;
     @include geometricLight(#A881F1, 200px, 40%);
-    @include geometricAnimation(7031ms)
+    @include geometricAnimation(7031ms);
+
+    @media screen and (max-width: 1350px) {
+      display: none;
+    }
   }
 
   .sphere {
     position: absolute;
     top: 4280px;
-    left: 130px;
+    left: 50px;
     @include geometricLight(#A881F1, 200px, 40%);
-    @include geometricAnimation(7031ms)
+    @include geometricAnimation(7031ms);
+
+    @media screen and (max-width: 1350px) {
+      display: none;
+    }
   }
 
   #screenshot-light-1 {
