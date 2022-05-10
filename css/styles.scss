@@ -385,14 +385,14 @@ section#author {
   }
 }
 
-@mixin geometricLight($color, $blur, $opacity: 0.6) {
+@mixin geometricLight($color, $blur) {
   &:after {
     content: '';
     position: absolute;
     top: 0%;
     left: 0%;
     background: $color;
-    opacity: $opacity;
+    opacity: 40%;
     border-radius: 10000050%;
     filter: blur($blur);
     width: 100%;
@@ -437,7 +437,7 @@ section#author {
     position: absolute;
     top: 59px;
     left: 53%;
-    @include geometricLight(#6967E7, 175px, 60%);
+    @include geometricLight(#6967E7, 175px);
     @include geometricAnimation(0ms);
 
     @media screen and (max-width: 1350px) {
@@ -456,7 +456,7 @@ section#author {
     position: absolute;
     top: 768px;
     right: 20px;
-    @include geometricLight(#6967E7, 200px, 25%);
+    @include geometricLight(#6967E7, 200px);
     @include geometricAnimation(1756ms);
 
     @media screen and (max-width: 1350px) {
@@ -469,7 +469,7 @@ section#author {
     position: absolute;
     top: 1040px;
     left: 70px;
-    @include geometricLight(#6967E7, 200px, 34%);
+    @include geometricLight(#6967E7, 200px);
     @include geometricAnimation(2750ms);
 
     @media screen and (max-width: 1350px) {
@@ -482,7 +482,7 @@ section#author {
     position: absolute;
     top: 1836px;
     right: 100px;
-    @include geometricLight(#6967E7, 200px, 34%);
+    @include geometricLight(#6967E7, 200px);
     @include geometricAnimation(5433ms);
 
     @media screen and (max-width: 1350px) {
@@ -495,7 +495,7 @@ section#author {
     position: absolute;
     top: 2788px;
     left: -80px;
-    @include geometricLight(#A881F1, 200px, 34%);
+    @include geometricLight(#A881F1, 200px);
     @include geometricAnimation(7031ms);
 
     @media screen and (max-width: 1350px) {
@@ -508,7 +508,7 @@ section#author {
     position: absolute;
     top: 3780px;
     right: 60px;
-    @include geometricLight(#A881F1, 200px, 40%);
+    @include geometricLight(#A881F1, 200px);
     @include geometricAnimation(7031ms);
 
     @media screen and (max-width: 1350px) {
@@ -520,7 +520,7 @@ section#author {
     position: absolute;
     top: 4280px;
     left: 50px;
-    @include geometricLight(#A881F1, 200px, 40%);
+    @include geometricLight(#A881F1, 200px);
     @include geometricAnimation(7031ms);
 
     @media screen and (max-width: 1350px) {
