@@ -189,6 +189,67 @@ section#screenshots {
   }
 }
 
+section#contact {
+  width: calc(min(90vw, 1120px));
+  background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(42px);
+  border-radius: 35px;
+  padding: 85px 100px;
+  border: 0.5px solid rgba(255, 255, 255, 0.25);
+  margin: 50px auto 0;
+
+  h3 {
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+  }
+
+  .input-container {
+    position: relative;
+    width: 100%;
+
+    input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid #6E6D82;
+      border-radius: 15px;
+      padding: 18px 32px;
+      font-size: 24px;
+      color: white;
+      outline: none;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    button {
+      padding: 8px 45px;
+      background-color: #A78BF0;
+      border-radius: 15px;
+      color: white;
+      font-size: 24px;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      transition: background-color 300ms ease, transform 300ms ease;
+      box-shadow: 0px 2px 8px rgba(92, 39, 232, 0.3);
+
+      &:hover {
+        background-color: #9d7fec;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
+
 @mixin geometricLight($color, $blur, $opacity: 0.6) {
   &:after {
     content: '';
@@ -276,8 +337,16 @@ section#screenshots {
 
   .dome {
     position: absolute;
-    top: 3630px;
+    top: 3780px;
     right: 60px;
+    @include geometricLight(#A881F1, 200px, 40%);
+    @include geometricAnimation(7031ms)
+  }
+
+  .sphere {
+    position: absolute;
+    top: 4280px;
+    left: 130px;
     @include geometricLight(#A881F1, 200px, 40%);
     @include geometricAnimation(7031ms)
   }
