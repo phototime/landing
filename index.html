@@ -118,8 +118,8 @@
   <h3>Got an idea? Let's make you a cool app!</h3>
   <div class="input-container">
     <label>
-      <input type="email" placeholder="Enter your email address">
-      <button>Send</button>
+      <input type="email" id="email-input" placeholder="Enter your email address">
+      <button id="send-email-button">Send</button>
     </label>
   </div>
 </section>
@@ -152,6 +152,8 @@
   ga('set', 'transport', 'beacon');
   ga('send', 'pageview')
 </script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/main.js"></script>
 <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
